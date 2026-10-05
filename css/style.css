@@ -1,0 +1,341 @@
+/* ========================================================
+   مدرسة النجاح - بشار | Custom Stylesheet
+   Extends Tailwind CSS with brand styling, animations,
+   scroll-reveal behaviour and form error states.
+   ======================================================== */
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  font-family: 'Tajawal', system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ---------- Hero Gold Particles ---------- */
+.hero-particles {
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #d4af37, transparent),
+    radial-gradient(2px 2px at 40px 70px, #fbbf24, transparent),
+    radial-gradient(1px 1px at 90px 40px, #d4af37, transparent),
+    radial-gradient(1px 1px at 130px 80px, #fcd34d, transparent),
+    radial-gradient(2px 2px at 160px 30px, #d4af37, transparent),
+    radial-gradient(1px 1px at 200px 60px, #fbbf24, transparent),
+    radial-gradient(1px 1px at 250px 20px, #d4af37, transparent),
+    radial-gradient(2px 2px at 300px 90px, #fcd34d, transparent),
+    radial-gradient(1px 1px at 350px 50px, #d4af37, transparent),
+    radial-gradient(2px 2px at 400px 70px, #fbbf24, transparent);
+  background-size: 420px 100px;
+  animation: sparkle 8s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes sparkle {
+  from { background-position: 0 0; }
+  to { background-position: 420px 0; }
+}
+
+/* ---------- Gold Glow Animation ---------- */
+@keyframes goldGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.6); }
+}
+
+.gold-glow {
+  animation: goldGlow 3s ease-in-out infinite;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- Scroll reveal (activated via IntersectionObserver) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger helper for card grids */
+.reveal[data-delay="1"] { transition-delay: 0.15s; }
+.reveal[data-delay="2"] { transition-delay: 0.3s; }
+.reveal[data-delay="3"] { transition-delay: 0.45s; }
+
+/* ---------- Navbar states: كحلي/أزرق داكن #172554 (blue-950) ---------- */
+#navbar {
+  background: rgba(23, 37, 84, 0.9);
+  background: color-mix(in srgb, #172554 90%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Applied when the user scrolls down the page */
+#navbar.navbar-solid {
+  background: #172554;
+  background: rgba(23, 37, 84, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px -15px rgba(23, 37, 84, 0.5);
+}
+
+/* روابط القائمة: أبيض ناصع + أزرق سماوي عند التحويم */
+.nav-link,
+.mobile-nav-link {
+  color: #ffffff;
+}
+.nav-link:hover,
+.mobile-nav-link:hover {
+  color: #7DD3FC; /* sky-300 — مريح للعين فوق الكحلي */
+}
+
+/* ---------- Eye-comfort: خلفية عامة #F0F7FF (sky-50) ---------- */
+body {
+  background-color: #F0F7FF;
+}
+
+/* تركيز مريح للعين على الأزرار والروابط (إتاحة الوصول) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #0ea5e9;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---------- Preloader ---------- */
+#preloader.hidden-preloader {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---------- Form field error state ---------- */
+.input-invalid {
+  border-color: #f87171 !important;
+  background-color: #fef2f2 !important;
+}
+
+/* ---------- File dropzone states ---------- */
+#idcard-drop.drop-invalid {
+  border-color: #f87171 !important;
+  background-color: #fef2f2 !important;
+}
+
+#idcard-drop.drop-valid {
+  border-color: #0284c7 !important;
+  border-style: solid;
+  background-color: #f0f9ff !important;
+}
+
+/* ---------- Receipt printing (حفظ الوصل بصيغة PDF) ---------- */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #success-message,
+  #success-message * {
+    visibility: visible;
+  }
+  #success-message {
+    position: absolute !important;
+    inset: 0 auto auto 0;
+    width: 100%;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  #success-message.reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+.input-invalid:focus {
+  box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.15) !important;
+}
+
+/* ---------- Counter number formatting ---------- */
+.counter {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Custom scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f7ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E3A8A;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
+
+/* ========================================================
+   Fully Responsive enhancements
+   Mobile-first, with breakpoints for phones (<=600px),
+   tablets (<=900px) and large desktops (>=1024px).
+   ======================================================== */
+
+/* ---------- Fluid media: images never break the layout ---------- */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Keep anchored sections clear of the fixed navbar */
+section[id],
+footer[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* ---------- Phones (max-width: 600px) ---------- */
+@media (max-width: 600px) {
+  /* Fluid hero heading (scales smoothly between ~29px and 38px) */
+  #home h1 {
+    font-size: clamp(1.8rem, 8.5vw, 2.4rem);
+    line-height: 1.35;
+  }
+
+  /* Hero floating badge never overflows tiny screens */
+  #home figure + div {
+    left: 0.75rem;
+    right: 0.75rem;
+  }
+
+  /* Prevent iOS auto-zoom on form fields (must stay >= 16px) */
+  #registration-form input,
+  #registration-form select {
+    font-size: 1rem;
+  }
+
+  /* Tighter section rhythm on phones */
+  #specialties .mt-16,
+  #specialties .mt-20 {
+    margin-top: 2.5rem;
+  }
+
+  /* Floating buttons respect notches / gesture bars */
+  #whatsapp-btn {
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  }
+  #back-to-top {
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Fluid section headings */
+  #specialties h2,
+  #stats h2,
+  #testimonials h2,
+  #register h2 {
+    font-size: clamp(1.7rem, 7.5vw, 2.05rem);
+  }
+
+  /* Compact floating action buttons */
+  #whatsapp-btn .animate-ping,
+  #whatsapp-btn .relative {
+    height: 3.25rem;
+    width: 3.25rem;
+  }
+  #whatsapp-btn {
+    right: 1rem;
+    bottom: 1rem;
+  }
+  #back-to-top {
+    left: 1rem;
+    bottom: 1rem;
+    height: 3.25rem;
+    width: 3.25rem;
+  }
+  #whatsapp-btn svg,
+  #back-to-top svg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  /* Contact rows wrap gracefully on narrow screens */
+  footer li {
+    flex-wrap: wrap;
+  }
+
+  /* Documents list cards keep a comfortable radius/padding */
+  #documents .group {
+    padding: 1.25rem;
+  }
+}
+
+/* ---------- Tablets (max-width: 900px) ---------- */
+@media (max-width: 900px) {
+  /* Tighter gutters in card grids */
+  #specialties .mt-14.grid,
+  #testimonials .mt-14.grid {
+    gap: 1.5rem;
+  }
+
+  /* Keep buttons fully clickable and centered */
+  #specialties .specialty-btn {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+
+  /* Hero CTAs never outgrow the container */
+  #home .mx-auto.max-w-7xl a {
+    max-width: 100%;
+  }
+}
+
+/* ---------- Large desktops (>=1024px) ---------- */
+@media (min-width: 1024px) {
+  /* Breathing room on very wide screens */
+  body {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Very large screens (>=1536px): cap line length ---------- */
+@media (min-width: 1536px) {
+  #home h1 {
+    font-size: 3.75rem;
+  }
+}
+
+/* ---------- Landscape phones / short viewports ---------- */
+@media (max-height: 500px) and (orientation: landscape) {
+  #home {
+    padding-top: 6rem;
+  }
+  #mobile-menu {
+    max-height: calc(100dvh - 4rem);
+  }
+}

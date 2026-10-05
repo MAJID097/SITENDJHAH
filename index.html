@@ -1,0 +1,1879 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="مدرسة النجاح - بشار | بوابتكم نحو التميز المهني والتكنولوجي في ولاية بشار. تسجيل في تخصصات: الميكرو معلوماتية، تقني مستغل المعلوماتية، تسيير الموارد البشرية، الشبكات، الأمن السيبراني، المحاسبة والتسيير، وأمانة المديرية." />
+  <meta name="keywords" content="مدرسة النجاح, النجاح بشار, تكوين مهني, ميكرو معلوماتية, تقني مستغل المعلوماتية, تسيير الموارد البشرية, شبكات, أمن سيبراني, محاسبة وتسيير, أمانة المديرية, تسجيل" />
+  <meta name="author" content="مدرسة النجاح - بشار" />
+  <meta property="og:title" content="مدرسة النجاح - بشار | بوابتكم نحو التميز المهني والتكنولوجي" />
+  <meta property="og:description" content="انضم إلى مدرسة النجاح بشار وسجّل في أحد تخصصاتنا السبعة: الميكرو معلوماتية، تقني مستغل المعلوماتية، الموارد البشرية، الشبكات، الأمن السيبراني، المحاسبة والتسيير، وأمانة المديرية." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#172554" />
+  <title>مدرسة النجاح - بشار | بوابتكم نحو التميز المهني والتكنولوجي</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Arabic-friendly font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Favicon: official school logo -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/jpeg" href="images/logo-annajah.jpg" />
+
+  <!-- Custom styles (extend Tailwind config + animations) -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Tailwind runtime configuration: brand colors, RTL font, custom animations -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            arabic: ['Tajawal', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            olive: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#0F5132',
+              950: '#0a3622'
+            },
+            sky: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e'
+            },
+            navy: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#020617'
+            },
+            gold: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f'
+            }
+          },
+          boxShadow: {
+            'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+            'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)',
+            'card-hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+            'glow-blue': '0 0 20px rgba(14, 165, 233, 0.3)',
+            'glow-orange': '0 0 20px rgba(249, 115, 22, 0.3)'
+          },
+          keyframes: {
+            'fade-up': {
+              '0%': { opacity: '0', transform: 'translateY(40px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            'fade-in': {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            'float-slow': {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-18px)' }
+            },
+            'pulse-ring': {
+              '0%': { transform: 'scale(0.9)', opacity: '0.7' },
+              '100%': { transform: 'scale(1.6)', opacity: '0' }
+            },
+            'gradient-shift': {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' }
+            }
+          },
+          animation: {
+            'fade-up': 'fade-up 0.8s ease-out both',
+            'fade-in': 'fade-in 1.2s ease-out both',
+            'float-slow': 'float-slow 6s ease-in-out infinite',
+            'gradient-shift': 'gradient-shift 10s ease infinite'
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="font-arabic bg-sky-50 bg-[#F0F7FF] text-blue-950 antialiased selection:bg-sky-200 selection:text-blue-950">
+
+  <!-- Preloader -->
+  <div id="preloader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-500">
+    <div class="text-center">
+      <div class="relative mx-auto h-16 w-16">
+        <div class="absolute inset-0 rounded-full border-4 border-sky-100"></div>
+        <div class="absolute inset-0 animate-spin rounded-full border-4 border-blue-950 border-t-transparent"></div>
+      </div>
+      <p class="mt-4 text-lg font-bold text-blue-950">مدرسة النجاح</p>
+    </div>
+  </div>
+
+  <!-- ======================= NAVIGATION BAR ======================= -->
+  <header id="navbar" class="sticky top-0 z-50 bg-blue-950/90 backdrop-blur-md shadow-lg transition-all duration-300">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3">
+        <!-- Logo / Brand -->
+        <a href="#home" class="flex items-center gap-3">
+          <img src="images/logo-annajah.jpg" alt="شعار مدرسة النجاح - بشار" class="h-12 w-12 rounded-full border-2 border-white/20 object-cover shadow-md" />
+          <div class="hidden sm:block leading-tight">
+            <span class="block text-lg font-extrabold text-white">مدرسة النجاح</span>
+            <span class="block text-[10px] font-medium text-sky-200">بشار - الجزائر</span>
+          </div>
+        </a>
+
+        <!-- Desktop menu links -->
+        <ul id="desktop-menu" class="hidden items-center gap-1 lg:flex">
+          <li><a href="#home" class="nav-link rounded-lg px-4 py-2 text-sm font-bold text-white transition hover:bg-white/10 hover:text-sky-300">الرئيسية</a></li>
+          <li><a href="#specialties" class="nav-link rounded-lg px-4 py-2 text-sm font-bold text-white transition hover:bg-white/10 hover:text-sky-300">التخصصات</a></li>
+          <li><a href="#stats" class="nav-link rounded-lg px-4 py-2 text-sm font-bold text-white transition hover:bg-white/10 hover:text-sky-300">إحصائيات</a></li>
+          <li><a href="#register" class="nav-link rounded-lg px-4 py-2 text-sm font-bold text-white transition hover:bg-white/10 hover:text-sky-300">التسجيل</a></li>
+          <li><a href="https://takwin.dz/" target="_blank" rel="noopener" class="nav-link rounded-lg px-4 py-2 text-sm font-bold text-white transition hover:bg-white/10 hover:text-sky-300">المنصة الرسمية</a></li>
+          <li><a href="#contact" class="nav-link rounded-lg px-4 py-2 text-sm font-bold text-white transition hover:bg-white/10 hover:text-sky-300">اتصل بنا</a></li>
+        </ul>
+
+        <!-- CTA button + mobile hamburger -->
+        <div class="flex items-center gap-3">
+          <a href="#register" class="hidden rounded-xl bg-sky-500 px-6 py-2.5 text-sm font-medium text-white shadow-md transition-all hover:bg-sky-600 hover:shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5 sm:inline-block">
+            سجّل الآن
+          </a>
+          <button id="menu-toggle" aria-label="القائمة" class="flex h-10 w-10 items-center justify-center rounded-lg text-white transition hover:bg-white/10 lg:hidden">
+            <svg id="menu-icon-open" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="menu-icon-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" d="M6 6l12 12M6 18L18 6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu panel -->
+      <div id="mobile-menu" class="hidden max-h-[calc(100dvh-5rem)] overflow-y-auto rounded-2xl bg-blue-950 shadow-lg backdrop-blur lg:hidden">
+        <ul class="flex flex-col p-3">
+          <li><a href="#home" class="mobile-nav-link block rounded-lg px-4 py-3 font-bold text-white transition hover:bg-white/10 hover:text-sky-300">الرئيسية</a></li>
+          <li><a href="#specialties" class="mobile-nav-link block rounded-lg px-4 py-3 font-bold text-white transition hover:bg-white/10 hover:text-sky-300">التخصصات</a></li>
+          <li><a href="#stats" class="mobile-nav-link block rounded-lg px-4 py-3 font-bold text-white transition hover:bg-white/10 hover:text-sky-300">إحصائيات</a></li>
+          <li><a href="#register" class="mobile-nav-link block rounded-lg px-4 py-3 font-bold text-white transition hover:bg-white/10 hover:text-sky-300">التسجيل</a></li>
+          <li><a href="https://takwin.dz/" target="_blank" rel="noopener" class="mobile-nav-link block rounded-lg px-4 py-3 font-bold text-white transition hover:bg-white/10 hover:text-sky-300">المنصة الرسمية</a></li>
+          <li><a href="#contact" class="mobile-nav-link block rounded-lg px-4 py-3 font-bold text-white transition hover:bg-white/10 hover:text-sky-300">اتصل بنا</a></li>
+          <li class="mt-2 border-t border-white/10 pt-2">
+            <a href="#register" class="block rounded-xl bg-sky-500 px-4 py-3 text-center font-medium text-white shadow-md transition-all hover:bg-sky-600">سجّل الآن</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ======================= HERO SECTION (محدّث - تصميم حديث مريح للعين) ======================= -->
+    <section id="home" class="relative overflow-hidden bg-gradient-to-b from-sky-100/70 to-sky-50 pt-28 pb-16 lg:pt-36 lg:pb-24">
+      <!-- زخارف ناعمة مريحة للعين -->
+      <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-sky-200/50 blur-3xl"></div>
+        <div class="absolute top-1/3 -right-24 h-80 w-80 rounded-full bg-blue-200/40 blur-3xl"></div>
+        <div class="absolute inset-0 opacity-[0.035]" style="background-image: radial-gradient(circle, #1E3A8A 1px, transparent 1px); background-size: 28px 28px;"></div>
+      </div>
+
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <!-- النص الرئيسي بجانب الصورة -->
+          <div class="text-center lg:text-right">
+            <span class="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-5 py-2 text-sm font-bold text-blue-900">
+              <span class="h-2 w-2 rounded-full bg-sky-500"></span>
+              احترافيــة • تميّــز • انطــلاق
+            </span>
+            <h1 class="mt-6 text-4xl font-extrabold leading-[1.35] text-blue-950 sm:text-5xl lg:text-[3.4rem]">
+              مستقبلك المهني يبدأ من هنا
+              <span class="relative mt-1 block text-blue-700">انضم لأفضل معهد للتكوين المهني
+                <svg class="absolute -bottom-2 right-0 w-48 text-sky-400/70" viewBox="0 0 200 9" fill="none" preserveAspectRatio="none"><path d="M2 7C60 2 140 2 198 7" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+              </span>
+            </h1>
+            <p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-slate-600 lg:mx-0">
+              انضم لأفضل معهد للتكوين المهني في بشار — دبلومات معترف بها وطنياً، تأطير احترافي، وتخصصات مواكبة لسوق العمل.
+            </p>
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+              <a href="#specialties" class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-lg font-bold text-white shadow-lg shadow-blue-600/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/30">
+                اكتشف تخصصاتنا
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+              </a>
+              <a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-xl bg-white border-2 border-blue-900 px-8 py-4 text-lg font-bold text-blue-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-900 hover:text-white">
+                تواصل معنا
+              </a>
+            </div>
+            <!-- إحصائيات مصغرة -->
+            <dl class="mt-10 flex flex-wrap items-center justify-center gap-6 sm:gap-8 lg:justify-start">
+              <div class="text-center">
+                <dt class="sr-only">تخصص</dt>
+                <dd class="block text-2xl font-extrabold text-blue-950">+20</dd>
+                <dd class="text-xs font-medium text-slate-500">تخصصاً معتمداً</dd>
+              </div>
+              <div class="h-10 w-px bg-blue-100"></div>
+              <div class="text-center">
+                <dt class="sr-only">طالب متخرج</dt>
+                <dd class="block text-2xl font-extrabold text-blue-950">+5000</dd>
+                <dd class="text-xs font-medium text-slate-500">خريج 🎓</dd>
+              </div>
+              <div class="h-10 w-px bg-blue-100"></div>
+              <div class="text-center">
+                <dt class="sr-only">سنوات خبرة</dt>
+                <dd class="block text-2xl font-extrabold text-blue-950">+10</dd>
+                <dd class="text-xs font-medium text-slate-500">سنوات خبرة</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- صورة الطلاب بشكل بارز وجذاب -->
+          <div class="relative mx-auto mb-10 w-full max-w-xl sm:mb-12 lg:mx-0 lg:mb-0">
+            <div class="absolute -inset-4 rounded-2xl bg-gradient-to-bl from-sky-200/70 via-transparent to-blue-200/50 blur-2xl" aria-hidden="true"></div>
+            <figure class="relative">
+              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop"
+                   alt="طلاب مدرسة النجاح أثناء التكوين المهني"
+                   class="h-auto w-full rounded-2xl object-cover shadow-2xl shadow-blue-900/15 ring-1 ring-blue-100"
+                   loading="eager" fetchpriority="high" />
+              <div class="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-t from-blue-950/30 via-transparent to-transparent"></div>
+              <figcaption class="absolute bottom-4 right-4 hidden rounded-xl bg-white/95 px-4 py-2 text-sm font-bold text-blue-950 shadow-lg backdrop-blur sm:block">
+                دفعات جديدة — المقاعد محدودة
+              </figcaption>
+            </figure>
+            <!-- كارت إحصائيات طافي أبيض فوق الصورة -->
+            <div class="absolute -bottom-6 left-4 rounded-2xl border border-blue-100 bg-white p-4 shadow-xl shadow-blue-900/10 lg:-left-6">
+              <div class="flex items-center gap-3">
+                <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-2xl text-white">🎓</div>
+                <div>
+                  <span class="block text-sm font-extrabold text-blue-950">أكثر من +5000 خريج 🎓</span>
+                  <span class="text-xs font-medium text-sky-700">دبلومات معترف بها وطنياً</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- فاصل متموج ناعم -->
+      <div class="absolute bottom-0 left-0 right-0" aria-hidden="true">
+        <svg viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none" class="h-12 w-full lg:h-16">
+          <path d="M0,50 C360,100 1080,0 1440,50 L1440,100 L0,100 Z" fill="#F0F7FF"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ======================= SPECIALTIES SECTION ======================= -->
+    <section id="specialties" class="relative bg-sky-50 bg-[#F0F7FF] py-16 sm:py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Section heading -->
+        <div class="text-center">
+          <span class="reveal inline-block rounded-full bg-sky-100 px-5 py-2 text-sm font-bold text-blue-900 border border-blue-200">برامجنا التكوينية</span>
+          <h2 class="reveal mt-6 text-4xl font-extrabold text-blue-950 sm:text-5xl">التخصصات المتاحة</h2>
+          <div class="reveal mx-auto mt-5 h-1.5 w-32 rounded-full bg-gradient-to-l from-blue-600 to-sky-500"></div>
+          <p class="reveal mx-auto mt-6 max-w-2xl text-lg text-blue-900/70">
+            تخصصات متنوعة بين دبلومات معترف بها وطنياً وتكوين تأهيلي ومهارات تقنية، مصمَّمة لمواكبة
+            متطلبات سوق العمل في بشار وخارجها.
+          </p>
+        </div>
+
+        <!-- ======================= DIPLOMAS CATEGORY ======================= -->
+        <div class="mt-16">
+          <div class="flex items-center gap-4 mb-8">
+            <div class="h-1 w-8 rounded-full bg-gradient-to-l from-blue-600 to-sky-500"></div>
+            <h3 class="reveal text-2xl font-extrabold text-blue-950">دبلومات معترف بها وطنياً</h3>
+            <div class="h-1 flex-1 rounded-full bg-blue-200"></div>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+
+            <!-- Card: الأمانة العامة -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="3">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop" alt="مكتب منظم" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 6 أشهر
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">دورة مكثفة</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">دورة مكثفة</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">الأمانة العامة</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">SECRÉTARIAT INTENSIF</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  دورة مكثفة في الإدارة والأمانة العامة. تعلم مهارات التنظيم والتواصل وإدارة المكاتب بكفاءة عالية.
+                </p>
+                <div class="mt-4 rounded-xl border border-blue-100 bg-sky-50/70 p-4">
+                  <p class="text-sm font-extrabold text-blue-950">لماذا هذا التخصص؟</p>
+                  <ul class="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-600">
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>تخصص حديث ومطلوب في الإدارات والمؤسسات</li>
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>تكوين مكثف يجمع بين النظرية والتطبيق</li>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-extrabold text-blue-950">ماذا ستتعلم؟</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">التحرير الإداري</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">تنظيم الاجتماعات</span>
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">الأرشفة والتوثيق</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="الأمانة العامة" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+
+
+            <!-- Card: الإستشارة عن بعد -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="2">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop" alt="استشارة عن بعد عبر الحاسوب" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 12 شهراً
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">دبلوم معتمد</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">دبلوم معتمد</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">الإستشارة عن بعد</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">CONSULTATION À DISTANCE</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تكوين عصري في الاستشارة عن بعد: التواصل الرقمي مع العملاء، إدارة الجلسات الافتراضية، وإتقان أدوات العمل عن بعد المطلوبة في سوق العمل.
+                </p>
+                <div class="mt-4 rounded-xl border border-blue-100 bg-sky-50/70 p-4">
+                  <p class="text-sm font-extrabold text-blue-950">لماذا هذا التخصص؟</p>
+                  <ul class="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-600">
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>مهنة عصرية عن بعد مطلوبة محلياً ودولياً</li>
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>مرونة العمل من أي مكان وبأجور محفزة</li>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-extrabold text-blue-950">ماذا ستتعلم؟</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">التواصل الرقمي</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">الجلسات الافتراضية</span>
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">أدوات العمل عن بعد</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="الإستشارة عن بعد" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: أمين مخزن -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="1">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop" alt="مخزن ومستودع" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 12 شهراً
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">دبلوم معتمد</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">دبلوم معتمد</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">أمين مخزن</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">GESTIONNAIRE DE MAGASIN</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تكوين متخصص في إدارة المخازن والمستودعات. مهارات تنظيم المخزون وتتبع البضائع وإدارة سلاسل التوريد.
+                </p>
+                <div class="mt-4 rounded-xl border border-blue-100 bg-sky-50/70 p-4">
+                  <p class="text-sm font-extrabold text-blue-950">لماذا هذا التخصص؟</p>
+                  <ul class="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-600">
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>كل مؤسسة تجارية وصناعية تحتاج أمين مخزن</li>
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>وظيفة مستقرة في التجارة واللوجستيك والصناعة</li>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-extrabold text-blue-950">ماذا ستتعلم؟</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">تنظيم المخزون</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">تتبع البضائع</span>
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">الجرد وسلاسل التوريد</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="أمين مخزن" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: عامل حفظ بيانات -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="2">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="إدخال البيانات" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 6 أشهر
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">دبلوم معتمد</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5v13.5M5.75 5v13.5m0-13.5h12.5m-12.5 0H3.375c-.621 0-1.125.504-1.125 1.125v9c0 .621.504 1.125 1.125 1.125h1.5m12.5-10.5h1.5c.621 0 1.125.504 1.125 1.125v9c0 .621-.504 1.125-1.125 1.125h-1.5m-12.5 0H5.625c-.621 0-1.125.504-1.125 1.125v-9c0-.621.504-1.125 1.125-1.125h1.5"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">دبلوم معتمد</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">عامل حفظ بيانات</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">OPÉRATEUR DE SAISIE DE DONNÉES</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تكوين مكثف في إدخال وحفظ البيانات. سرعة الكتابة على لوحة المفاتيح وإدخال المعلومات في الأنظمة المعلوماتية.
+                </p>
+                <div class="mt-4 rounded-xl border border-blue-100 bg-sky-50/70 p-4">
+                  <p class="text-sm font-extrabold text-blue-950">لماذا هذا التخصص؟</p>
+                  <ul class="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-600">
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>ولوج سريع لسوق العمل دون شروط معقدة</li>
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>مطلوب في الإدارات والمؤسسات ومكاتب الخدمات</li>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-extrabold text-blue-950">ماذا ستتعلم؟</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">سرعة الكتابة</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">إدخال البيانات</span>
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">برامج المكتب</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="عامل حفظ بيانات" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: تربية الطفولة والأمومة -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="2">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop" alt="تربية الطفولة ورعاية الأطفال" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 12 شهراً
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">دبلوم معتمد</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">دبلوم معتمد</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">تربية الطفولة والأمومة</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">ÉDUCATION DE L'ENFANCE</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تكوين متخصص في تربية الطفولة ورعاية الأمومة: تنمية مهارات الطفل، التغذية السليمة، والإسعافات الأولية. يُؤهلك للعمل في رياض الأطفال ودور الحضانة.
+                </p>
+                <div class="mt-4 rounded-xl border border-blue-100 bg-sky-50/70 p-4">
+                  <p class="text-sm font-extrabold text-blue-950">لماذا هذا التخصص؟</p>
+                  <ul class="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-600">
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>طلب متزايد على مربيات الطفولة في الحضانات</li>
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>مهنة إنسانية نبيلة بأثر مباشر على الأجيال</li>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-extrabold text-blue-950">ماذا ستتعلم؟</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">تنمية الطفل</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">التغذية السليمة</span>
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">الإسعافات الأولية</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="تربية الطفولة والأمومة" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: تقني سامي تسيير موارد بشرية -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="3">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop" alt="تسيير الموارد البشرية" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 30 شهراً
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">دبلوم معتمد</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">تقني سامي</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">تقني سامي تسيير موارد بشرية</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">GESTION DES RESSOURCES HUMAINES</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تكوين معمّق في تسيير العنصر البشري داخل المؤسسات، بشهادة دولة تقني سامي معترف بها وطنياً وفق المرجع الوطني للتكوينات.
+                </p>
+                <div class="mt-4 rounded-xl border border-blue-100 bg-sky-50/70 p-4">
+                  <p class="text-sm font-extrabold text-blue-950">لماذا هذا التخصص؟</p>
+                  <ul class="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-600">
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>شهادة دولة تقني سامي معترف بها وطنياً</li>
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>وظائف مضمونة في كل المؤسسات العمومية والخاصة</li>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-extrabold text-blue-950">ماذا ستتعلم؟</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">التوظيف والاستقطاب</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">تسيير الأجور</span>
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">قانون العمل</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">التكوين المستمر</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="تقني سامي تسيير موارد بشرية" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: المحاسبة والتسيير -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="1">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&h=400&fit=crop" alt="المحاسبة والتسيير المالي" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 30 شهراً
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">دبلوم معتمد</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">تقني سامي</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">المحاسبة والتسيير</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">COMPTABILITÉ ET GESTION</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تكوين شامل في المحاسبة والتسيير المالي للمؤسسات، بشهادة دولة تقني سامي تفتح لك أبواب مكاتب المحاسبة والإدارات المالية.
+                </p>
+                <div class="mt-4 rounded-xl border border-blue-100 bg-sky-50/70 p-4">
+                  <p class="text-sm font-extrabold text-blue-950">لماذا هذا التخصص؟</p>
+                  <ul class="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-600">
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>مهنة مستقرة ومطلوبة في جميع القطاعات الاقتصادية</li>
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>إمكانية العمل الحر وفتح مكتب محاسبة خاص</li>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-extrabold text-blue-950">ماذا ستتعلم؟</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">المحاسبة العامة</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">النظام المحاسبي SCF</span>
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">الجباية</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">برامج التسيير</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="المحاسبة والتسيير" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: التسويق -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="2">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="التسويق واستراتيجية المبيعات" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 30 شهراً
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">دبلوم معتمد</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">تقني سامي</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">التسويق</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">MARKETING</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تكوين عصري في فنون التسويق والمبيعات، بشهادة دولة تقني سامي تواكب التحول الرقمي ونمو التجارة الإلكترونية.
+                </p>
+                <div class="mt-4 rounded-xl border border-blue-100 bg-sky-50/70 p-4">
+                  <p class="text-sm font-extrabold text-blue-950">لماذا هذا التخصص؟</p>
+                  <ul class="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-600">
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>تخصص عصري بفرص عمل واسعة في التجارة والخدمات</li>
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>مهارات مطلوبة في التسويق الرقمي والمشاريع الناشئة</li>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-extrabold text-blue-950">ماذا ستتعلم؟</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">دراسة السوق</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">التسويق الرقمي</span>
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">تقنيات البيع</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">التجارة الإلكترونية</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="التسويق" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: تقني سامي إدارة وأمن الشبكات -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="3">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="images/cybersecurity.jpg" alt="إدارة وأمن الشبكات والأمن السيبراني" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 30 شهراً
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">دبلوم معتمد</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">تقني سامي</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">تقني سامي إدارة وأمن الشبكات</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">ADMINISTRATION ET SÉCURITÉ DES RÉSEAUX</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تخصص المستقبل في إدارة الشبكات والأمن السيبراني، بشهادة دولة تقني سامي لحماية الأنظمة والبنى الرقمية للمؤسسات.
+                </p>
+                <div class="mt-4 rounded-xl border border-blue-100 bg-sky-50/70 p-4">
+                  <p class="text-sm font-extrabold text-blue-950">لماذا هذا التخصص؟</p>
+                  <ul class="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-600">
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>الأمن السيبراني أولوية وطنية بطلب متزايد على الخبراء</li>
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>أجور مرتفعة وفرص عمل في الشركات والإدارات والبنوك</li>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-extrabold text-blue-950">ماذا ستتعلم؟</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">إدارة الشبكات</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">الأمن السيبراني</span>
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">الحماية من الاختراق</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">أنظمة التشغيل</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="تقني سامي إدارة وأمن الشبكات" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ======================= QUALIFYING TRAINING CATEGORY ======================= -->
+        <div class="mt-20">
+          <div class="flex items-center gap-4 mb-8">
+            <div class="h-1 w-8 rounded-full bg-gradient-to-l from-blue-600 to-sky-500"></div>
+            <h3 class="reveal text-2xl font-extrabold text-blue-950">التكوين التأهيلي</h3>
+            <div class="h-1 flex-1 rounded-full bg-blue-200"></div>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Card: لغات أجنبية -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="1">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop" alt="كتب ولغات" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 12 شهراً
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">تكوين تأهيلي</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">تكوين تأهيلي</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">لغات أجنبية</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">FORMATION QUALIFANTE LANGUES ÉTRANGÈRES</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تكوين مكثف في اللغات الأجنبية: الفرنسية، الإنجليزية، الإسبانية. يُؤهلك للعمل في مجالات الترجمة والتعريب والعلاقات الدولية.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-600 border border-blue-100">فرنسية</span>
+                  <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">إنجليزية</span>
+                  <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">إسبانية</span>
+                </div>
+                <div class="mt-4 rounded-xl border border-blue-100 bg-sky-50/70 p-4">
+                  <p class="text-sm font-extrabold text-blue-950">لماذا هذا التخصص؟</p>
+                  <ul class="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-600">
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>اللغات مفتاح التوظيف في الشركات والسياحة والترجمة</li>
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>شهادة تأهيلية تعزز ملفك في مسابقات التوظيف</li>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-extrabold text-blue-950">ماذا ستتعلم؟</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">المحادثة والقواعد</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">الترجمة والتعريب</span>
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">المراسلات المهنية</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="لغات أجنبية" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: صيانة الشبكات -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="2">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop" alt="خادم وشبكة معلوماتية" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 12 شهراً
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">تكوين تأهيلي</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17V7m4 10V7m4 10V7M5 21h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">تكوين تأهيلي</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">صيانة الشبكات</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">MAINTENANCE RÉSEAUX</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تكوين متخصص في صيانة وتركيب الشبكات المعلوماتية وأجهزة الحاسوب. مهارات عملية مطلوبة في جميع المؤسسات.
+                </p>
+                <div class="mt-4 rounded-xl border border-blue-100 bg-sky-50/70 p-4">
+                  <p class="text-sm font-extrabold text-blue-950">لماذا هذا التخصص؟</p>
+                  <ul class="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-600">
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>كل مؤسسة تحتاج تقني شبكات وصيانة عتاد</li>
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>مهنة عملية بأجور جيدة وإمكانية العمل الحر</li>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-extrabold text-blue-950">ماذا ستتعلم؟</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">تركيب الشبكات</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">صيانة الحواسيب</span>
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">تشخيص الأعطال</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="صيانة الشبكات" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: النظام المحاسبي SCF -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="3">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&h=400&fit=crop" alt="محاسبة وإدارة مالية" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 12 شهراً
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">تكوين تأهيلي</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">تكوين تأهيلي</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">النظام المحاسبي SCF</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">SYSTÈME COMPTABLE FINANCIER</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تكوين متخصص في النظام المحاسبي المالي SCF. يُؤهلك للعمل في قسم المحاسبة والتسيير المالي في المؤسسات.
+                </p>
+                <div class="mt-4 rounded-xl border border-blue-100 bg-sky-50/70 p-4">
+                  <p class="text-sm font-extrabold text-blue-950">لماذا هذا التخصص؟</p>
+                  <ul class="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-600">
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>النظام المحاسبي SCF إلزامي في كل المؤسسات</li>
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>طلب دائم على المحاسبين في القطاعين العام والخاص</li>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-extrabold text-blue-950">ماذا ستتعلم؟</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">مسك الدفاتر</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">الميزانيات</span>
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">التصريحات الجبائية</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="النظام المحاسبي SCF" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: عون أمن ووقاية H.S.E -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="1">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop" alt="حارس بلباس أمن صناعي" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 12 شهراً
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">تكوين تأهيلي</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">تكوين تأهيلي</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">عون أمن ووقاية H.S.E</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">AGENT SÉCURITÉ H.S.E</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تكوين في مجال الصحة والسلامة وبيئة العمل (H.S.E). يُؤهلك للعمل كعون أمن ووقاية في المؤسسات والشركات.
+                </p>
+                <div class="mt-4 rounded-xl border border-blue-100 bg-sky-50/70 p-4">
+                  <p class="text-sm font-extrabold text-blue-950">لماذا هذا التخصص؟</p>
+                  <ul class="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-600">
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>منصب إلزامي في المنشآت الصناعية والشركات الكبرى</li>
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>وظائف مستقرة برواتب محفزة في قطاع الطاقة والصناعة</li>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-extrabold text-blue-950">ماذا ستتعلم؟</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">الوقاية من المخاطر</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">الإسعافات الأولية</span>
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">إطفاء الحرائق</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="عون أمن ووقاية H.S.E" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: الأمانة المكتبية -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="2">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop" alt="مكتب مكتب منظم" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 12 شهراً
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">تكوين تأهيلي</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6 pt-5">
+                <h3 class="text-lg font-extrabold text-blue-950">الأمانة المكتبية</h3>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">SECRÉTARIAT DE BUREAU</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تكوين متخصص في الأمانة المكتبية وإدارة الوثائق. يُؤهلك للعمل في مكاتب الإدارة والاستقبال.
+                </p>
+                <div class="mt-4 rounded-xl border border-blue-100 bg-sky-50/70 p-4">
+                  <p class="text-sm font-extrabold text-blue-950">لماذا هذا التخصص؟</p>
+                  <ul class="mt-2 space-y-1.5 text-[13px] leading-relaxed text-slate-600">
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>كل إدارة ومؤسسة تحتاج أمينة مكتب محترفة</li>
+                    <li class="flex items-start gap-1.5"><svg class="mt-0.5 h-4 w-4 shrink-0 text-sky-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>ولوج سريع لسوق العمل في الإدارات والاستقبال</li>
+                  </ul>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-extrabold text-blue-950">ماذا ستتعلم؟</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">التحرير الإداري</span>
+                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700 border border-sky-200">الأرشفة والتوثيق</span>
+                    <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">برامج المكتب</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="الأمانة المكتبية" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ======================= PROGRAMMING & DESIGN CATEGORY ======================= -->
+        <div class="mt-20">
+          <div class="flex items-center gap-4 mb-8">
+            <div class="h-1 w-8 rounded-full bg-gradient-to-l from-blue-600 to-sky-500"></div>
+            <h3 class="reveal text-2xl font-extrabold text-blue-950">لغات البرمجة والتصميم</h3>
+            <div class="h-1 flex-1 rounded-full bg-blue-200"></div>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Card: C++ -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="1">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop" alt="برمجة حاسوب" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 6 أشهر
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">برمجة</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">برمجة</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">C++</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">PROGRAMMATION C++</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تعلم لغة C++ من الأساسيات إلى المتقدمة. تطوير تطبيقات سطح مكتب وأنظمة مدمجة وألعاب الفيديو.
+                </p>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="C++" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: JAVA -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="2">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop" alt="تطوير برمجيات" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 6 أشهر
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">برمجة</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">برمجة</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">JAVA</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">PROGRAMMATION JAVA</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تعلم لغة JAVA لتطوير تطبيقات الويب والهواتف الذكية والأنظمة المؤسسية. لغة متعددة المنصات.
+                </p>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="JAVA" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: COVADIS 3D -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="3">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop" alt="تصميم ثلاثي الأبعاد" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 6 أشهر
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">تصميم</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">تصميم</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">COVADIS 3D</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">LOGICIEL COVADIS 3D</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تعلم استخدام برنامج COVADIS 3D للتصميم ثلاثي الأبعاد. مهارات مطلوبة في مجالات الهندسة والعمارة.
+                </p>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="COVADIS 3D" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: ARCHICAD -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="1">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&h=400&fit=crop" alt="تصميم معماري" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 6 أشهر
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">تصميم</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21m-3.75 3H21"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">تصميم</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">ARCHICAD</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">LOGICIEL ARCHICAD</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تعلم برنامج ARCHICAD لتصميم المباني والمشاريع المعمارية. أداة احترافية للمهندسين المعماريين.
+                </p>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="ARCHICAD" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: AUTOCAD -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="2">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop" alt="رسم هندسي" loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: 6 أشهر
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">تصميم</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.107-7.486a2.25 2.25 0 113.182 3.182L13.5 16.5l-4.5 1.5 1.5-4.5 4.592-4.592z"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">تصميم</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">AUTOCAD</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">LOGICIEL AUTOCAD</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  تعلم برنامج AUTOCAD للرسومات التقنية والمخططات الهندسية. أساسيات ومتقدم في التصميم الهندسي.
+                </p>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="AUTOCAD" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: DELPHI -->
+            <article class="reveal group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white border border-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-sky-300" data-delay="3">
+              <div class="absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-l from-blue-600 to-sky-500"></div>
+              <div class="relative h-44 shrink-0 overflow-hidden">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Delphi_Logo_12.svg" alt="شعار بيئة التطوير دلفي Embarcadero Delphi" loading="lazy"
+                  class="h-full w-full bg-white object-contain p-8 transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
+                <span class="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold text-blue-950 shadow-sm backdrop-blur">
+                  <svg class="h-3.5 w-3.5 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  مدة التكوين: شهر واحد
+                </span>
+                <span class="absolute right-4 top-4 rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white shadow-sm">دورة حسب المستويات</span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-blue-900 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-blue-900 px-3 py-1 text-xs font-bold text-white">دورة حسب المستويات</span>
+                  </div>
+                </div>
+                <h4 class="text-lg font-extrabold text-blue-950">DELPHI</h4>
+                <p class="mt-1 text-[11px] font-bold tracking-wider text-sky-700" dir="ltr">PROGRAMMATION DELPHI</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  دورة مكثفة لمدة شهر واحد حسب المستويات: تعلم لغة DELPHI لتطوير تطبيقات سطح مكتب Windows وقواعد البيانات.
+                </p>
+                <div class="mt-auto pt-5">
+                  <a href="#register" data-specialty="DELPHI" class="specialty-btn flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-3 font-bold text-white shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md">
+                    سجل في هذا التخصص
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ======================= STATS / COUNTERS BAR ======================= -->
+    <section id="stats" class="relative overflow-hidden bg-gradient-to-b from-sky-100/80 to-sky-50 py-16 sm:py-20 lg:py-24">
+      <!-- Decorative blobs -->
+      <div class="pointer-events-none absolute inset-0">
+        <div class="absolute -top-20 right-1/4 h-72 w-72 rounded-full bg-sky-300/40 blur-[100px]"></div>
+        <div class="absolute -bottom-20 left-1/4 h-72 w-72 rounded-full bg-sky-300/40 blur-[100px]"></div>
+      </div>
+
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <span class="reveal inline-block rounded-full bg-white px-5 py-2 text-sm font-bold text-blue-900 border border-blue-200 shadow-sm">مدرستنا في أرقام</span>
+          <h2 class="reveal mt-6 text-4xl font-extrabold text-blue-950 sm:text-5xl">نمو متواصل وثقة متجددة</h2>
+          <div class="reveal mx-auto mt-5 h-1 w-24 rounded-full bg-blue-600"></div>
+        </div>
+
+        <div class="mt-16 grid gap-6 sm:grid-cols-3">
+          <!-- Visitors counter -->
+          <div class="reveal group rounded-2xl border border-blue-100 bg-white p-8 text-center shadow-xl shadow-blue-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:shadow-2xl" data-delay="1">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-100 text-blue-700 transition group-hover:scale-110">
+              <svg class="h-9 w-9" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm-9 0c0-1.7.7-3.2 1.8-4.5C10 5 11.5 4.5 12 4.5s2 .5 3.2 3c1.1 1.3 1.8 2.8 1.8 4.5s-.7 3.2-1.8 4.5c-1.2 1.5-2.7 2-3.2 2s-2-.5-3.2-2C6.7 15.2 6 13.7 6 12z"/>
+              </svg>
+            </div>
+            <p class="mt-5 text-3xl font-extrabold text-blue-950 sm:text-4xl">
+              <span class="counter" data-target="12847" data-suffix="">0</span>
+            </p>
+            <p class="mt-2 font-medium text-blue-900/60">عدد زوار الموقع</p>
+          </div>
+
+          <!-- Registered students counter -->
+          <div class="reveal group rounded-2xl border border-blue-100 bg-white p-8 text-center shadow-xl shadow-blue-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:shadow-2xl" data-delay="2">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-100 text-blue-700 transition group-hover:scale-110">
+              <svg class="h-9 w-9" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+              </svg>
+            </div>
+            <p class="mt-5 text-3xl font-extrabold text-blue-950 sm:text-4xl">
+              <span class="counter" data-target="3420" data-suffix="">0</span>
+            </p>
+            <p class="mt-2 font-medium text-blue-900/60">الطلاب المسجلين</p>
+          </div>
+
+          <!-- Specialties counter -->
+          <div class="reveal group rounded-2xl border border-blue-100 bg-white p-8 text-center shadow-xl shadow-blue-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:shadow-2xl" data-delay="3">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-100 text-blue-700 transition group-hover:scale-110">
+              <svg class="h-9 w-9" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 14.18L3.24 12 12 6.35 20.76 12 12 17.18z"/>
+              </svg>
+            </div>
+            <p class="mt-5 text-3xl font-extrabold text-blue-950 sm:text-4xl">
+              <span class="counter" data-target="20" data-suffix="">0</span>
+            </p>
+            <p class="mt-2 font-medium text-blue-900/60">التخصصات المتاحة</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curved top divider -->
+      <svg class="absolute top-0 left-0 block w-full text-[#F0F7FF]" viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none">
+        <path d="M0 60h1440V20C1200 55 1000 60 720 60S240 55 0 20v40z" fill="currentColor"/>
+      </svg>
+    </section>
+
+    <!-- ======================= TESTIMONIALS SECTION ======================= -->
+    <section id="testimonials" class="relative bg-white py-16 sm:py-20 lg:py-32">
+      <!-- Subtle background pattern -->
+      <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle, #15803d 1px, transparent 1px); background-size: 40px 40px;"></div>
+      
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Section heading -->
+        <div class="text-center">
+          <span class="reveal inline-block rounded-full bg-sky-100 px-5 py-2 text-sm font-bold text-blue-900 border border-blue-200">آراء خريجينا</span>
+          <h2 class="reveal mt-6 text-4xl font-extrabold text-blue-950 sm:text-5xl">ماذا يقول طلابنا عنا؟</h2>
+          <div class="reveal mx-auto mt-5 h-1.5 w-32 rounded-full bg-gradient-to-l from-blue-600 to-sky-500"></div>
+          <p class="reveal mx-auto mt-6 max-w-2xl text-lg text-blue-900/70">
+            خريجو مدرسة النجاح يشاركون تجربتهم وكيف فتح لهم التكوين المهني أبواب سوق العمل.
+          </p>
+        </div>
+
+        <!-- Testimonial cards -->
+        <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Testimonial 1 -->
+          <figure class="reveal group relative flex h-full flex-col rounded-2xl bg-white border border-slate-200 shadow-lg p-8 transition duration-300 hover:-translate-y-1 hover:shadow-md" data-delay="1">
+            <div class="flex items-center justify-between">
+              <div class="flex gap-1 text-sky-500" aria-label="تقييم 5 من 5">
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+              </div>
+              <svg class="h-10 w-10 text-sky-200 transition group-hover:text-sky-300 group-hover:drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.17 6C4.88 6 3 7.88 3 10.17c0 2.29 1.88 4.17 4.17 4.17.36 0 .71-.05 1.04-.13-.5 1.7-1.9 3.02-3.66 3.4v2.06c4.06-.6 7.17-4.1 7.17-8.33V10.17C11.72 7.88 9.46 6 7.17 6zm10 0C14.88 6 13 7.88 13 10.17c0 2.29 1.88 4.17 4.17 4.17.36 0 .71-.05 1.04-.13-.5 1.7-1.9 3.02-3.66 3.4v2.06c4.06-.6 7.17-4.1 7.17-8.33V10.17C21.72 7.88 19.46 6 17.17 6z"/>
+              </svg>
+            </div>
+            <blockquote class="mt-5 flex-1 leading-relaxed text-blue-900/70">
+              تكوين عملي من البداية إلى النهاية. تخرّجت من تخصص الشبكات وحصلت على وظيفة في شركة اتصالات
+              ببشار قبل إنهاء ملفي الإداري. الأساتذة يرافقونك خطوة بخطوة.
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-blue-100 pt-5">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-lg font-extrabold text-white shadow-lg">ي</div>
+              <div>
+                <p class="font-extrabold text-blue-950">يوسف بلقاسم</p>
+                <p class="text-xs text-sky-700">خريج تقني سامي في الشبكات</p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <!-- Testimonial 2 -->
+          <figure class="reveal group relative flex h-full flex-col rounded-2xl bg-white border border-slate-200 shadow-lg p-8 transition duration-300 hover:-translate-y-1 hover:shadow-md" data-delay="2">
+            <div class="flex items-center justify-between">
+              <div class="flex gap-1 text-sky-500" aria-label="تقييم 5 من 5">
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+              </div>
+              <svg class="h-10 w-10 text-sky-200 transition group-hover:text-sky-300 group-hover:drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.17 6C4.88 6 3 7.88 3 10.17c0 2.29 1.88 4.17 4.17 4.17.36 0 .71-.05 1.04-.13-.5 1.7-1.9 3.02-3.66 3.4v2.06c4.06-.6 7.17-4.1 7.17-8.33V10.17C11.72 7.88 9.46 6 7.17 6zm10 0C14.88 6 13 7.88 13 10.17c0 2.29 1.88 4.17 4.17 4.17.36 0 .71-.05 1.04-.13-.5 1.7-1.9 3.02-3.66 3.4v2.06c4.06-.6 7.17-4.1 7.17-8.33V10.17C21.72 7.88 19.46 6 17.17 6z"/>
+              </svg>
+            </div>
+            <blockquote class="mt-5 flex-1 leading-relaxed text-blue-900/70">
+              المدرسة منحتني ثقة بنفسي. التكوين نظري وعملي في نفس الوقت، والتدريب الميداني في المؤسسات
+              فتح أمامي أبواب العمل قبل التخرج.
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-blue-100 pt-5">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-lg font-extrabold text-white shadow-lg">س</div>
+              <div>
+                <p class="font-extrabold text-blue-950">سارة مرابط</p>
+                <p class="text-xs text-sky-700">خريجة تقني سامي في تسيير الموارد البشرية</p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <!-- Testimonial 3 -->
+          <figure class="reveal group relative flex h-full flex-col rounded-2xl bg-white border border-slate-200 shadow-lg p-8 transition duration-300 hover:-translate-y-1 hover:shadow-md" data-delay="3">
+            <div class="flex items-center justify-between">
+              <div class="flex gap-1 text-sky-500" aria-label="تقييم 5 من 5">
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+                <svg class="h-5 w-5 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.363 1.118l1.286 3.957c.3.922-.755 1.688-1.539 1.118l-3.366-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.783.57-1.838-.196-1.538-1.118l1.285-3.957a1 1 0 00-.363-1.118L2.98 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+              </div>
+              <svg class="h-10 w-10 text-sky-200 transition group-hover:text-sky-300 group-hover:drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.17 6C4.88 6 3 7.88 3 10.17c0 2.29 1.88 4.17 4.17 4.17.36 0 .71-.05 1.04-.13-.5 1.7-1.9 3.02-3.66 3.4v2.06c4.06-.6 7.17-4.1 7.17-8.33V10.17C11.72 7.88 9.46 6 7.17 6zm10 0C14.88 6 13 7.88 13 10.17c0 2.29 1.88 4.17 4.17 4.17.36 0 .71-.05 1.04-.13-.5 1.7-1.9 3.02-3.66 3.4v2.06c4.06-.6 7.17-4.1 7.17-8.33V10.17C21.72 7.88 19.46 6 17.17 6z"/>
+              </svg>
+            </div>
+            <blockquote class="mt-5 flex-1 leading-relaxed text-blue-900/70">
+              اخترت تخصص المستقبل ولم أندم. المخابر مجهزة والمحتوى مواكب لسوق العمل، والمرافقة نحو
+              التشغيل ليست مجرد كلام.
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-blue-100 pt-5">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-lg font-extrabold text-white shadow-lg">ع</div>
+              <div>
+                <p class="font-extrabold text-blue-950">عبد الرحمان زروقي</p>
+                <p class="text-xs text-sky-700">خريج تقني سامي في الأمن السيبراني</p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= REGISTRATION FORM SECTION ======================= -->
+    <section id="register" class="relative bg-gradient-to-br from-blue-950 via-blue-900 to-blue-950 py-16 sm:py-20 lg:py-28">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <span class="reveal inline-block rounded-full bg-white/10 px-4 py-1.5 text-sm font-bold text-sky-300 border border-white/10">التحق بنا الآن</span>
+          <h2 class="reveal mt-4 text-3xl font-extrabold text-white sm:text-4xl">استمارة التسجيل الأولي</h2>
+          <div class="reveal mx-auto mt-4 h-1.5 w-24 rounded-full bg-gradient-to-l from-blue-600 to-sky-400"></div>
+          <p class="reveal mt-5 text-lg text-white/80">
+            املأ البيانات التالية وسيتواصل معك فريق المدرسة لتأكيد تسجيلك.
+          </p>
+        </div>
+
+        <!-- ===== ملف التسجيل الأولي: الوثائق المطلوبة ===== -->
+        <div class="reveal mt-12" id="documents">
+          <div class="text-center">
+            <span class="inline-flex items-center gap-2 rounded-full bg-sky-100 px-5 py-2 text-sm font-bold text-blue-900 border border-blue-200">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6M9 8h6M5 21h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+              الوثائق المطلوبة
+            </span>
+            <h3 class="mt-3 text-2xl font-extrabold text-white">ملف التسجيل الأولي</h3>
+            <p class="mt-2 text-white/70">تكفي الاستمارة أدناه لطلب التسجيل، وتُقدَّم الوثائق التالية عند تأكيد التسجيل بالمدرسة:</p>
+          </div>
+
+          <div class="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <!-- شهادة الميلاد -->
+            <div class="group flex flex-col items-center rounded-2xl bg-white border border-slate-200 p-6 text-center shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-md">
+              <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-sky-100 text-blue-900 transition group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white">
+                <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+                </svg>
+              </div>
+              <p class="mt-4 font-extrabold text-blue-950">شهادة ميلاد</p>
+              <span class="mt-2 rounded-full bg-sky-100 px-3 py-1 text-xs font-bold text-blue-900">نسخة واحدة</span>
+            </div>
+
+            <!-- الشهادة المدرسية -->
+            <div class="group flex flex-col items-center rounded-2xl bg-white border border-slate-200 p-6 text-center shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-md">
+              <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-sky-100 text-blue-900 transition group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white">
+                <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/>
+                </svg>
+              </div>
+              <p class="mt-4 font-extrabold text-blue-950">شهادة مدرسية أصلية</p>
+              <span class="mt-2 rounded-full bg-sky-100 px-3 py-1 text-xs font-bold text-blue-900">نسخة واحدة</span>
+            </div>
+
+            <!-- بطاقة التعريف الوطنية -->
+            <div class="group flex flex-col items-center rounded-2xl bg-white border border-slate-200 p-6 text-center shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-md">
+              <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-sky-100 text-blue-900 transition group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white">
+                <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5a2.25 2.25 0 002.25 2.25zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z"/>
+                </svg>
+              </div>
+              <p class="mt-4 font-extrabold text-blue-950">نسخة من بطاقة التعريف الوطنية</p>
+              <span class="mt-2 rounded-full bg-sky-100 px-3 py-1 text-xs font-bold text-blue-900">نسخة واحدة</span>
+            </div>
+
+            <!-- صورتان شمسيتان -->
+            <div class="group flex flex-col items-center rounded-2xl bg-white border border-slate-200 p-6 text-center shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-md">
+              <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-sky-100 text-blue-900 transition group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white">
+                <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z"/>
+                </svg>
+              </div>
+              <p class="mt-4 font-extrabold text-blue-950">صورتان شمسيتان</p>
+              <span class="mt-2 rounded-full bg-sky-100 px-3 py-1 text-xs font-bold text-blue-900">أحدث صورتان</span>
+            </div>
+          </div>
+
+          <p class="mt-6 text-center text-sm text-slate-500">
+            للترشيح والاستفسار، اتصل بنا على
+            <a href="tel:+21366469828" dir="ltr" class="font-extrabold text-blue-900 transition hover:text-sky-600">06 66 46 98 28</a>
+            أو
+            <a href="tel:+213664983202" dir="ltr" class="font-extrabold text-blue-900 transition hover:text-sky-600">06 64 98 32 02</a>
+          </p>
+        </div>
+
+        <!-- Success message + printable receipt (hidden by default) -->
+        <div id="success-message" class="reveal mt-10 hidden rounded-3xl border-2 border-sky-200 bg-white p-6 text-center sm:p-8" role="alert">
+          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-800 text-white shadow-lg shadow-blue-600/30">
+            <svg class="h-9 w-9" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <h3 class="mt-4 text-2xl font-extrabold text-blue-900">تم تسجيلكم بنجاح!</h3>
+          <p class="mt-2 text-blue-900/70" id="success-detail">شكراً لثقتك بمدرسة النجاح - بشار. سيتم الاتصال بك قريباً لتأكيد تسجيلك.</p>
+
+          <!-- وصل التسجيل الأولي (قابل للطباعة والحفظ PDF) -->
+          <div id="receipt" class="mx-auto mt-6 max-w-md rounded-2xl border border-blue-100 bg-sky-50/60 p-6 text-right">
+            <p class="text-center text-sm font-extrabold text-blue-950">وصل التسجيل الأولي — مدرسة النجاح · بشار</p>
+            <dl class="mt-4 space-y-3 text-sm">
+              <div class="flex items-center justify-between gap-4 border-b border-blue-100 pb-2">
+                <dt class="font-medium text-slate-500">رقم التسجيل</dt>
+                <dd id="r-regnum" class="font-extrabold text-blue-950" dir="ltr">—</dd>
+              </div>
+              <div class="flex items-center justify-between gap-4 border-b border-blue-100 pb-2">
+                <dt class="font-medium text-slate-500">اللقب</dt>
+                <dd id="r-lastname" class="font-extrabold text-blue-950">—</dd>
+              </div>
+              <div class="flex items-center justify-between gap-4 border-b border-blue-100 pb-2">
+                <dt class="font-medium text-slate-500">الاسم</dt>
+                <dd id="r-firstname" class="font-extrabold text-blue-950">—</dd>
+              </div>
+              <div class="flex items-center justify-between gap-4 border-b border-blue-100 pb-2">
+                <dt class="font-medium text-slate-500">رقم الهاتف</dt>
+                <dd id="r-phone" class="font-extrabold text-blue-950" dir="ltr">—</dd>
+              </div>
+              <div class="flex items-center justify-between gap-4 border-b border-blue-100 pb-2">
+                <dt class="font-medium text-slate-500">التخصص المطلوب</dt>
+                <dd id="r-specialty" class="font-extrabold text-blue-950">—</dd>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <dt class="font-medium text-slate-500">تاريخ التسجيل</dt>
+                <dd id="r-date" class="font-extrabold text-blue-950">—</dd>
+              </div>
+            </dl>
+            <p class="mt-4 text-center text-xs leading-relaxed text-slate-400">احتفظ برقم التسجيل لتتبع ملفك لدى إدارة المدرسة، وقدّم نسخة من هذا الوصل مع ملف التسجيل.</p>
+          </div>
+
+          <div class="no-print mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
+            <button type="button" id="print-receipt" class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-3 font-bold text-white shadow-lg shadow-blue-600/25 transition-all hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-md">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9V3h12v6M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2m-12-3h12a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4a2 2 0 012-2z"/>
+              </svg>
+              حفظ الوصل بصيغة PDF
+            </button>
+            <button type="button" id="new-registration" class="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-blue-900 bg-white px-8 py-3 font-bold text-blue-900 transition-all hover:bg-blue-900 hover:text-white">
+              تسجيل طلب آخر
+            </button>
+          </div>
+        </div>
+
+        <!-- Registration form -->
+        <form id="registration-form" class="reveal mt-10 rounded-3xl bg-white p-6 shadow-card-hover sm:p-10" novalidate>
+          <div class="grid gap-6 sm:grid-cols-2">
+            <!-- Last name -->
+            <div>
+              <label for="lastname" class="mb-2 block text-sm font-bold text-blue-950">
+                اللقب <span class="text-red-500">*</span>
+              </label>
+              <div class="relative">
+                <input type="text" id="lastname" name="lastname" placeholder="مثال: بن عودة" required
+                  class="w-full rounded-xl border-2 border-blue-100 bg-sky-50/60 px-4 py-3 pr-11 transition outline-none focus:border-sky-500 focus:bg-white focus:ring-4 focus:ring-sky-100" />
+                <svg class="absolute top-3.5 right-3.5 h-5 w-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+              </div>
+              <p class="field-error mt-1 hidden text-sm font-medium text-red-500">يرجى إدخال اللقب.</p>
+            </div>
+
+            <!-- First name -->
+            <div>
+              <label for="firstname" class="mb-2 block text-sm font-bold text-blue-950">
+                الاسم <span class="text-red-500">*</span>
+              </label>
+              <div class="relative">
+                <input type="text" id="firstname" name="firstname" placeholder="مثال: أحمد" required
+                  class="w-full rounded-xl border-2 border-blue-100 bg-sky-50/60 px-4 py-3 pr-11 transition outline-none focus:border-sky-500 focus:bg-white focus:ring-4 focus:ring-sky-100" />
+                <svg class="absolute top-3.5 right-3.5 h-5 w-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+              </div>
+              <p class="field-error mt-1 hidden text-sm font-medium text-red-500">يرجى إدخال الاسم.</p>
+            </div>
+
+            <!-- Phone number -->
+            <div>
+              <label for="phone" class="mb-2 block text-sm font-bold text-blue-950">
+                رقم الهاتف <span class="text-red-500">*</span>
+              </label>
+              <div class="relative">
+                <input type="tel" id="phone" name="phone" placeholder="05XXXXXXXX / 07XXXXXXXX" required
+                  class="w-full rounded-xl border-2 border-blue-100 bg-sky-50/60 px-4 py-3 pr-11 transition outline-none focus:border-sky-500 focus:bg-white focus:ring-4 focus:ring-sky-100" />
+                <svg class="absolute top-3.5 right-3.5 h-5 w-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.5a1 1 0 01.9.55l1.2 2.4a1 1 0 01-.1 1.1L8.3 9a13 13 0 006.7 6.7l1.05-1.2a1 1 0 011.1-.1l2.4 1.2a1 1 0 01.55.9V19a2 2 0 01-2 2h-1C9.7 21 3 14.3 3 6V5z"/>
+                </svg>
+              </div>
+              <p class="field-error mt-1 hidden text-sm font-medium text-red-500">يرجى إدخال رقم هاتف صحيح (يبدأ بـ 05 أو 06 أو 07 ويحتوي على 10 أرقام).</p>
+            </div>
+
+            <!-- Specialty dropdown -->
+            <div>
+              <label for="specialty" class="mb-2 block text-sm font-bold text-blue-950">
+                التخصص المطلوب <span class="text-red-500">*</span>
+              </label>
+              <div class="relative">
+                <select id="specialty" name="specialty" required
+                  class="w-full appearance-none rounded-xl border-2 border-blue-100 bg-sky-50/60 px-4 py-3 pr-11 transition outline-none focus:border-sky-500 focus:bg-white focus:ring-4 focus:ring-sky-100">
+                  <option value="" disabled selected>اختر التخصص...</option>
+                  <optgroup label="دبلومات معترف بها وطنياً">
+                    <option value="الأمانة العامة">الأمانة العامة</option>
+                    <option value="تقني سامي تسيير موارد بشرية">تقني سامي تسيير موارد بشرية</option>
+                    <option value="المحاسبة والتسيير">المحاسبة والتسيير</option>
+                    <option value="التسويق">التسويق</option>
+                    <option value="تقني سامي إدارة وأمن الشبكات">تقني سامي إدارة وأمن الشبكات</option>
+                    <option value="الإستشارة عن بعد">الإستشارة عن بعد</option>
+                    <option value="أمين مخزن">أمين مخزن (12 شهراً)</option>
+                    <option value="عامل حفظ بيانات">عامل حفظ بيانات (6 أشهر)</option>
+                    <option value="تربية الطفولة والأمومة">تربية الطفولة والأمومة</option>
+                  </optgroup>
+                  <optgroup label="لغات البرمجة والتصميم">
+                    <option value="C++">C++</option>
+                    <option value="JAVA">JAVA</option>
+                    <option value="COVADIS 3D">COVADIS 3D</option>
+                    <option value="ARCHICAD">ARCHICAD</option>
+                    <option value="AUTOCAD">AUTOCAD</option>
+                    <option value="DELPHI">DELPHI</option>
+                  </optgroup>
+                  <optgroup label="التكوين التأهيلي">
+                    <option value="لغات أجنبية">لغات أجنبية</option>
+                    <option value="صيانة الشبكات">صيانة الشبكات</option>
+                    <option value="النظام المحاسبي SCF">النظام المحاسبي SCF</option>
+                    <option value="عون أمن ووقاية H.S.E">عون أمن ووقاية H.S.E</option>
+                    <option value="الأمانة المكتبية">الأمانة المكتبية</option>
+                  </optgroup>
+                </select>
+                <svg class="absolute top-4 left-4 h-5 w-5 text-slate-400 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </div>
+              <p class="field-error mt-1 hidden text-sm font-medium text-red-500">يرجى اختيار التخصص المطلوب.</p>
+            </div>
+
+            <!-- ID card upload (JPEG / PDF) -->
+            <div class="sm:col-span-2">
+              <span class="mb-2 block text-sm font-bold text-blue-950">
+                صورة بطاقة التعريف الوطنية <span class="text-red-500">*</span>
+                <span class="font-medium text-slate-400">(JPEG أو PDF — حد أقصى 5MB)</span>
+              </span>
+              <div class="relative">
+                <label for="idcard" id="idcard-drop" class="flex cursor-pointer flex-col items-center justify-center gap-1.5 rounded-xl border-2 border-dashed border-blue-200 bg-sky-50/60 px-4 py-6 text-center transition hover:border-sky-500 hover:bg-sky-50">
+                  <svg class="h-9 w-9 text-sky-600" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/>
+                  </svg>
+                  <span id="idcard-label" class="text-sm font-bold text-blue-900">اضغط هنا لرفع الملف</span>
+                  <span class="text-xs text-slate-400">الصيغ المقبولة: JPG / JPEG / PDF</span>
+                </label>
+                <input type="file" id="idcard" name="idcard" accept=".jpg,.jpeg,.pdf,image/jpeg,application/pdf" class="sr-only" required />
+              </div>
+              <p class="field-error mt-1 hidden text-sm font-medium text-red-500">يرجى رفع صورة بطاقة التعريف الوطنية (JPEG أو PDF).</p>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" id="submit-btn"
+            class="mt-8 flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 py-4 text-lg font-bold text-white shadow-lg shadow-sky-500/25 transition-all hover:-translate-y-0.5 hover:bg-sky-600 hover:shadow-md active:translate-y-0">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+            </svg>
+            إرسال الطلب
+          </button>
+          <p class="mt-4 text-center text-xs text-slate-400">
+            بتقديمك هذا الطلب فأنت توافق على معالجة بياناتك الشخصية من طرف إدارة المدرسة لغرض التسجيل فقط.
+          </p>
+        </form>
+
+        <!-- ===== منصة التكوين المهني الرسمية (تأكيد التسجيل) ===== -->
+        <div class="reveal mt-10 rounded-3xl border-2 border-blue-200 bg-white p-8 text-center shadow-card-hover sm:p-10">
+          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 text-white shadow-lg">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.6-2.6A11.95 11.95 0 0112 2a11.95 11.95 0 01-8.6 3.4A12 12 0 0012 22a12 12 0 008.6-16.6z"/>
+            </svg>
+          </div>
+          <h3 class="mt-4 text-xl font-extrabold text-blue-950 sm:text-2xl">التسجيل عبر المنصة الرسمية</h3>
+          <p class="mx-auto mt-2 max-w-xl leading-relaxed text-slate-600">
+            بعد ملء الاستمارة أعلاه والتواصل معنا، يمكنك تأكيد تسجيلك عبر
+            <span class="font-bold text-blue-950">منصة التكوين المهني الرسمية</span>
+            لوزارة التكوين والتعليم المهنيين.
+          </p>
+          <a href="https://takwin.dz//" target="_blank" rel="noopener"
+            class="mt-6 inline-flex items-center gap-2 rounded-full bg-blue-600 px-8 py-4 text-lg font-bold text-white shadow-lg shadow-blue-600/25 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/30">
+            الدخول إلى منصة التكوين المهني
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+            </svg>
+          </a>
+          <p class="mt-3 text-xs font-bold tracking-wide text-slate-400" dir="ltr">takwin.dz</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CONTACT / FOOTER ======================= -->
+    <footer id="contact" class="relative bg-blue-950 text-slate-300">
+      <div class="mx-auto max-w-7xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- About / brand -->
+          <div>
+            <div class="flex items-center gap-3">
+              <img src="images/logo-annajah.jpg" alt="شعار مدرسة النجاح - بشار" class="h-14 w-14 rounded-full border-2 border-white/10 object-cover" />
+              <div>
+                <p class="text-xl font-extrabold text-white">مدرسة النجاح</p>
+                <p class="text-xs text-white/50">بشار - الجزائر</p>
+              </div>
+            </div>
+            <p class="mt-4 text-sm leading-relaxed text-white/60">
+              مؤسسة تكوينية بولاية بشار، تُقدّم تخصصات عامل مؤهل وتقني وتقني سامي في مجالات الإدارة والتكنولوجيا الحديثة،
+              بهدف تكوين كفاءات شابة جاهزة لسوق العمل.
+            </p>
+            <!-- Accreditation: Ministry of Vocational Training -->
+            <div class="mt-5 flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3">
+              <img src="images/ministry-logo.jpg" alt="شعار وزارة التكوين والتعليم المهنيين" class="h-14 w-14 shrink-0 rounded-full bg-white object-contain p-0.5" />
+              <p class="text-xs leading-relaxed text-slate-300">
+                <span class="font-bold text-white">مؤسسة معتمدة في التكوين المهني</span>
+                تحت إشراف <span class="font-bold text-white">وزارة التكوين والتعليم المهنيين</span>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact info -->
+          <div>
+            <h4 class="text-lg font-extrabold text-white">معلومات الاتصال</h4>
+            <div class="mt-2 h-1 w-12 rounded-full bg-sky-400"></div>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li class="flex items-start gap-3">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10 text-sky-300">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+                  </svg>
+                </span>
+                <a href="https://www.google.com/maps/search/?api=1&query=حي+القصر+القديم+رقم+12+أ+24+طريق+فليج+وسط+مدينة+بشار+الجزائر" target="_blank" rel="noopener" class="leading-relaxed transition hover:text-sky-300">
+                  حي القصر القديم، رقم 12 أ 24، طريق فليج، وسط مدينة بشار
+                </a>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10 text-sky-300">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.5a1 1 0 01.9.55l1.2 2.4a1 1 0 01-.1 1.1L8.3 9a13 13 0 006.7 6.7l1.05-1.2a1 1 0 011.1-.1l2.4 1.2a1 1 0 01.55.9V19a2 2 0 01-2 2h-1C9.7 21 3 14.3 3 6V5z"/>
+                  </svg>
+                </span>
+                <a href="tel:+21366469828" dir="ltr" class="font-bold transition hover:text-sky-300">0669047855</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10 text-sky-300">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.5a1 1 0 01.9.55l1.2 2.4a1 1 0 01-.1 1.1L8.3 9a13 13 0 006.7 6.7l1.05-1.2a1 1 0 011.1-.1l2.4 1.2a1 1 0 01.55.9V19a2 2 0 01-2 2h-1C9.7 21 3 14.3 3 6V5z"/>
+                  </svg>
+                </span>
+                <a href="tel:+213664983202" dir="ltr" class="font-bold transition hover:text-sky-300">0698739041</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10 text-sky-300">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6m-18 0a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/>
+                  </svg>
+                </span>
+                <span dir="ltr">contact@annajah-school.dz</span>
+              </li>
+            </ul>
+
+            <!-- Reception hours -->
+            <div class="mt-5 flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4">
+              <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sky-400/20 text-sky-300">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </span>
+              <div>
+                <p class="font-bold text-white">أوقات الاستقبال</p>
+                <p class="mt-1 text-sm text-slate-300">من السبت إلى الخميس: من <span dir="ltr">9:00</span> صباحاً إلى <span dir="ltr">8:00</span> مساءً</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social media + quick links -->
+          <div>
+            <h4 class="text-lg font-extrabold text-white">تابعنا على</h4>
+            <div class="mt-2 h-1 w-12 rounded-full bg-sky-400"></div>
+            <div class="mt-4 flex items-center gap-3">
+              <a href="https://www.facebook.com/profile.php?id=61571922720213" target="_blank" rel="noopener" aria-label="فيسبوك" class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 transition hover:-translate-y-1 hover:bg-blue-600 hover:text-white">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.6V4.2c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.6H7.6V14h2.7v8h3.2z"/></svg>
+              </a>
+              <a href="#" aria-label="انستغرام" class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 transition hover:-translate-y-1 hover:bg-pink-600 hover:text-white">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.3.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.3-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.9.4-2.3.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.3-.4 1.2-.1 1.6-.1 4.8-.1zm0 3.5a6.3 6.3 0 100 12.6 6.3 6.3 0 000-12.6zm0 10.4a4.1 4.1 0 110-8.2 4.1 4.1 0 010 8.2zm6.6-10.9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
+              </a>
+              <a href="#" aria-label="يوتيوب" class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 transition hover:-translate-y-1 hover:bg-red-600 hover:text-white">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23 12s0-3.4-.4-5c-.2-.9-.9-1.6-1.8-1.8C19.2 4.8 12 4.8 12 4.8s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 8.6 1 12 1 12s0 3.4.4 5c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c-.9.2 1.6-.9 1.8-1.8.4-1.6.4-5 .4-5zM9.5 15.5v-7l6 3.5-6 3.5z"/></svg>
+              </a>
+              <a href="#" aria-label="لينكد إن" class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 transition hover:-translate-y-1 hover:bg-sky-700 hover:text-white">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.9 8.6H3.4V21h3.5V8.6zM5.2 3.5a2 2 0 100 4 2 2 0 000-4zM20.6 14.6c0-3.1-1.7-4.9-4.1-4.9-1.5 0-2.4.7-3 1.6V8.6H10c0 .9 0 12.4 0 12.4h3.5v-6.9c0-.4 0-.7.1-1 .3-.7.9-1.4 2-1.4 1.4 0 2 1 2 2.4V21h3.5v-6.4z"/></svg>
+              </a>
+            </div>
+
+            <h4 class="mt-8 text-lg font-extrabold text-white">روابط سريعة</h4>
+            <div class="mt-2 h-1 w-12 rounded-full bg-sky-400"></div>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li><a href="#home" class="text-white/60 transition hover:text-sky-300">الرئيسية</a></li>
+              <li><a href="#specialties" class="text-white/60 transition hover:text-sky-300">التخصصات</a></li>
+              <li><a href="#testimonials" class="text-white/60 transition hover:text-sky-300">آراء الطلاب</a></li>
+              <li><a href="#register" class="text-white/60 transition hover:text-sky-300">التسجيل</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm sm:flex-row">
+          <p>© <span id="year"></span> مدرسة النجاح - بشار. جميع الحقوق محفوظة.</p>
+          <p class="text-slate-400">صُمّم بكل فخر في ولاية بشار</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/21366469828?text=سلام، أريد الاستفسار عن التسجيل في مدرسة النجاح - بشار" target="_blank" rel="noopener"
+    id="whatsapp-btn"
+    aria-label="تواصل معنا عبر واتساب"
+    class="group fixed bottom-6 right-6 z-40 flex items-center justify-center">
+    <span class="absolute inline-flex h-14 w-14 animate-ping rounded-full bg-green-400 opacity-30"></span>
+    <span class="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition duration-300 group-hover:scale-110 group-hover:bg-[#1fbf59]">
+      <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </span>
+    <span class="pointer-events-none absolute right-full ml-3 mr-3 hidden whitespace-nowrap rounded-full bg-blue-950 px-4 py-2 text-sm font-bold text-white opacity-0 shadow-lg transition duration-300 group-hover:opacity-100 sm:block">
+      راسلنا على واتساب
+    </span>
+  </a>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" aria-label="العودة إلى الأعلى"
+    class="fixed bottom-6 left-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white opacity-0 shadow-lg shadow-blue-600/30 transition hover:bg-blue-700"
+    style="visibility: hidden;">
+    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
